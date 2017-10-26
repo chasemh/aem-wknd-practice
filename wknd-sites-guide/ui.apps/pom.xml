@@ -78,13 +78,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.all</artifactId>
-            <type>zip</type>
-        </dependency>
-
+    		<artifactId>core.wcm.components.all</artifactId>
+    		<type>zip</type>
+    	</dependency>
     </dependencies>
     <build>
         <resources>
@@ -96,12 +94,10 @@
                     <exclude>**/.vltignore</exclude>
                 </excludes>
             </resource>
-
-            <resource>
+             <resource>
                 <directory>src/main/content/META-INF/vault/definition</directory>
                 <targetPath>../vault-work/META-INF/vault/definition</targetPath>
             </resource>
-
         </resources>
 
         <plugins>
@@ -150,37 +146,16 @@
                             <target>/apps/wknd/install</target>
                         </embedded>
                     </embeddeds>
-
+                     <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.cq</groupId>
+    						<artifactId>core.wcm.components.all</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>com.day.jcr.vault</groupId>
-                <artifactId>content-package-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <group>aem-guides/wknd</group>
-                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>wknd-sites-guide.core</artifactId>
-                            <target>/apps/wknd/install</target>
-                        </embedded>
-                    </embeddeds>
-
-                        <subPackages>
-                            <subPackage>
-                                <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.all</artifactId>
-                                <filter>true</filter>
-                            </subPackage>
-                        </subPackages>
-                <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
     <profiles>

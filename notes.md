@@ -1,7 +1,13 @@
 # WKND Tutorial Site Notes
 
+# Table of Contents
+1. [Part 1: Project Setup](#part-1-project-setup)
+2. [Part 2: Creating a Base Page and Template](part-2-creating-a-base-page-and-template)
+
+* Tutorial found [here](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+
 ## Part 1: Project Setup
-* https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html
+* [Tutorial Part 1](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
 * Used Lazybones to initialize the sample project
 * Maven is used to install the dependencies for the project
 
@@ -151,4 +157,13 @@
   * Free and opensource on Github
 * Installed automatically in the default runmode
   * In production runmode (nosamplecontent), you need to install them yourself by adding them to your Maven project
+
+### Developer Workflow
+* Devs push and pull code between local file system and local AEM instance
+* Once code is locally tested, it should be pushed up to a shared repo, where it can be integrated and deployed.
+* Something are easier to edit in AEM itself (Page layouts etc.). Edits can be made in AEM and then synced down into Eclipse.
+
+## Part 2: Creating a Base Page and Template
+
+### Create Base Page Component
 * 

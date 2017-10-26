@@ -93,10 +93,10 @@
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
         </dependency>
-
+        <!-- AEM Core Components -->
         <dependency>
             <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.core</artifactId>
+        	<artifactId>core.wcm.components.core</artifactId>
         </dependency>
     </dependencies>
 

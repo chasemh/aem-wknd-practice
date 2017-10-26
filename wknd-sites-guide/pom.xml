@@ -163,7 +163,8 @@
                 <version>1</version>
                 <scope>provided</scope>
             </dependency>
-
+            
+            <!-- AEM Core Component dependencies -->
             <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.core</artifactId>
@@ -171,13 +172,12 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.adobe.cq</groupId>
-                <artifactId>core.wcm.components.all</artifactId>
-                <type>zip</type>
-                <version>1.0.4</version>
-                <scope>provided</scope>
-            </dependency>
-            
+            	<groupId>com.adobe.cq</groupId>
+    			<artifactId>core.wcm.components.all</artifactId>
+    			<type>zip</type>
+    			<version>1.0.4</version>
+    			<scope>provided</scope>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -384,7 +384,7 @@
                                     <goal>pmd</goal>
                                     <goal>cpd</goal>
                                     <!-- build will fail on warnings -->
-                                    <goal>check</goal>
+                                    <goal>check</goal> 
                                 </goals>
                             </execution>
                         </executions>

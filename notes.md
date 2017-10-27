@@ -166,4 +166,19 @@
 ## Part 2: Creating a Base Page and Template
 
 ### Create Base Page Component
-* 
+* Dialogs are the mechanism that allows authors to update properties and logic of component through a UI dialog box.
+* HTML files in an AEM project are actually HTL files
+* HTL files have a set of global objects that they can access (such as `currentPage` )
+* AEM contains core components that can be used as basic building blocks for content creation
+  * Text, Image, Title components
+* Can include these in the WKND project by creating new cq:components for each one and setting them to inherit functionality from the core components via the `sling:resourceSuperType` setting
+  * This is called creating proxy components
+  * Recommended approach for including core components in your project
+* cq:editConfig defines behavior such as Drag and Drop functionality from the Asset Finder in the Sites Editor
+* Template Types = Templates for templates. Need to take advantage of AEM's Editable Template feature
+  * Stored under /conf in an AEM project
+  * Typically edited within AEM directly
+* Three main areas of Editable Templates
+  1. Structure: Defines the components that are part of the template. Not editable by content authors.
+  2. Initial Content: Defines components that the template will start with. Can be edited by content authors.
+  3. Policies: Defines configurations on how components will behave and what options content authors have available.

@@ -182,3 +182,7 @@
   1. Structure: Defines the components that are part of the template. Not editable by content authors.
   2. Initial Content: Defines components that the template will start with. Can be edited by content authors.
   3. Policies: Defines configurations on how components will behave and what options content authors have available.
+* Content root defines the allowed templates for a given site and is used to define other global configuration.
+  * Conventionally not intended to be the home page for a site, should redirect to the true home page
+* Once created, the content root can be added to source control as it is critical to the behavior of a site and provides a baseline content structure
+* 

@@ -2,7 +2,8 @@
 
 # Table of Contents
 1. [Part 1: Project Setup](#part-1-project-setup)
-2. [Part 2: Creating a Base Page and Template](part-2-creating-a-base-page-and-template)
+2. [Part 2: Creating a Base Page and Template](#part-2-creating-a-base-page-and-template)
+3. [Part 3: Client-Side Libraries and Responsive Grid](#part-3-client-side-libraries-and-responsive-grid)
 
 * Tutorial found [here](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
@@ -185,4 +186,6 @@
 * Content root defines the allowed templates for a given site and is used to define other global configuration.
   * Conventionally not intended to be the home page for a site, should redirect to the true home page
 * Once created, the content root can be added to source control as it is critical to the behavior of a site and provides a baseline content structure
-* 
+* If the content root is very large, it is sometimes given it's own Maven module (ui.content)
+
+## Part 3: Client-Side Libraries and Responsive Grid

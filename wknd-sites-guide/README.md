@@ -1,10 +1,8 @@
 # WKND Sites Project
 
-This is the code companion to a multi-part series on HelpX:
+This is an implementation of the AEM WKND Site tutorial.
 
 ### [Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
-
-1. [Part 1 - Project Setup](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
 
 ## Building
 
@@ -30,5 +28,3 @@ Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci
 
 The CRX host and port can be specified on the command line with:
 mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>
-
-

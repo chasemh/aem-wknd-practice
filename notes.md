@@ -250,3 +250,24 @@
   * dependencies (String[])
   * css.txt (nt::file)
   * js.txt (nt::file)
+* CSS and JS is dynamically loaded from a path that starts with `/etc.clientlibs`
+* When a site is published, you should separate your client libraries away from `/apps` as you will want to restrict the path for security reasons.
+* Can use `cq:htmlTag` to control the class attributes of certain HTML elements
+  * There are issues syncing `cq:htmlTag` components from Eclipse to AEM
+  * Make them in CRXDE Lite for now
+
+### Configure Mobile Emulator
+
+* Can setup mobile emulation of sites by creating a `sling:OsgiConfig` component based on the factory component  `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider`
+* The name must have a unique suffix added to the end of the factor name
+  * i.e. `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-wknd`
+* Typically place the component in a separate author config folder (`config.author`) to designate that authors should have the ability to work with the mobile emulator to preview pages on different types of mobile devices
+
+### Front-End Developer Workflow
+
+* Typically, some front end design work is done outside of AEM before implementation
+* Static markup generation outside of AEM benefits
+  * Determine and organize the front-end frameworks you want to use
+  * Quicker to determine the global theme and style for the HTML
+  * Discover issues between design and implementation early
+  * Provides a reference for AEM developers
